@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer {
+    background-image: url(backgroundAlley.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero{
+    background-image: url(hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 233px;
+    height: 240px;
+    position: absolute;
+    bottom:0;
+    left: 10vw;
+}
+
+.obstacle{
+    background-image: url(spike.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 120px;
+    height:  170px;
+
+    position:absolute;
+    bottom: 30px;
+    left:48vw;
+}
+.gameOver{
+    background-color: aliceblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    top: 85px;
+    font-size: 63px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50vw;
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    visibility: hidden;
+
+}
+
+#scoreCont{
+    background-color: azure;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+
+    
+}
+
+.animateHero{
+    animation: hero 0.6s linear;
+}
+
+.obstacleAnimate{
+    animation: obstacle 4s linear infinite;
+}
+
+@keyframes hero {
+    0%{
+        bottom: 0;;
+    }
+    50%{
+        bottom: 450px;
+    }
+    100%{
+        bottom:0px;
+    }
+}
+
+@keyframes obstacle {
+    0%{
+        left:100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+    
+}
